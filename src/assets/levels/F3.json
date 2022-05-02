@@ -1,0 +1,222 @@
+{
+    "color": "pink",
+    "top": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "value": "table"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 1,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "table"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 2,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "table"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "table"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "table"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "table"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "table"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "table"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "table"
+        }
+    ],
+    "bottom": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 1,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 2,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "value": "crown"
+        },
+        {
+            "x": 5,
+            "y": 3,
+            "value": "bread"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "crown"
+        }
+    ]
+}

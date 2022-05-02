@@ -1,0 +1,212 @@
+{
+    "color": "blue",
+    "top": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "lasange"
+        }
+    ],
+    "bottom": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 2,
+            "value": "water"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "lasange"
+        }
+    ]
+}

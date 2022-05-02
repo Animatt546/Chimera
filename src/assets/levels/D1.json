@@ -1,0 +1,117 @@
+{
+    "color": "green",
+    "top": [
+        {
+            "x": 3,
+            "y": 3,
+            "value": "glasstable"
+        }
+    ],
+    "bottom": [
+        {
+            "x": 2,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 2,
+            "value": "glasstable"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 3,
+            "value": "water"
+        },
+        {
+            "x": 2,
+            "y": 3,
+            "value": "glasstable"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "value": "glasstable"
+        },
+        {
+            "x": 4,
+            "y": 3,
+            "value": "glasstable"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "value": "lasange"
+        }
+    ]
+}

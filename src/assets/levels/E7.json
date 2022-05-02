@@ -1,0 +1,152 @@
+{
+    "color": "blue",
+    "top": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "value": "crown"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "crown"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "value": "crown"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "crown"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "value": "crown"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "crown"
+        }
+    ],
+    "bottom": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "value": "block"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 2,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "value": "water"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "block"
+        }
+    ]
+}

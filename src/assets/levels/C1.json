@@ -1,0 +1,161 @@
+{
+    "color": "pink",
+    "top": [],
+    "bottom": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "glasstable"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "value": "glasstable"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "value": "glasstable"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "glasstable"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "value": "block"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "value": "block"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "glasstable"
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "block"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "value": "glasstable"
+        },
+        {
+            "x": 2,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 2,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "block"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "glasstable"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "value": "radiator"
+        },
+        {
+            "x": 4,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "value": "block"
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "block"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "value": "block"
+        },
+        {
+            "x": 5,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "block"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 1,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 5,
+            "y": 6,
+            "value": "block"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "block"
+        }
+    ]
+}

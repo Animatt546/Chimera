@@ -1,0 +1,222 @@
+{
+    "color": "yellow",
+    "top": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "black"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "black"
+        },
+        {
+            "x": 1,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "black"
+        }
+    ],
+    "bottom": [
+        {
+            "x": 0,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "value": "black"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 2,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "value": "black"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "value": "black"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "value": "black"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "value": "lasange"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "value": "black"
+        },
+        {
+            "x": 1,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 5,
+            "y": 6,
+            "value": "lasange"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "value": "black"
+        }
+    ]
+}
