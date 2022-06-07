@@ -3,9 +3,10 @@ import Player from "./Player";
 import Vector2 from './Vector2';
 import Game from "./Game";
 import lettersToNumbers from "./lettersToNumbers";
-import { pickUps } from "./BlockData";
+import { pickups } from "./BlockData";
 import Block from "./Block";
 import Assets from "./Assets"
+import Stats from "./Stats";
 
 export default class Canvas {
     private canvas: HTMLCanvasElement = document.createElement('canvas')
@@ -53,7 +54,7 @@ export default class Canvas {
 
     end() {
         this.drawSite(Assets.gameOver)
-        let numbToDraw = this.game.score.toString()
+        let numbToDraw = Stats.points.toString()
         while (numbToDraw.length < 4) {
             numbToDraw = "0" + numbToDraw
         }
@@ -73,7 +74,7 @@ export default class Canvas {
 
     win() {
         this.drawSite(Assets.gameWin)
-        let numbToDraw = this.game.score.toString()
+        let numbToDraw = Stats.points.toString()
         while (numbToDraw.length < 4) {
             numbToDraw = "0" + numbToDraw
         }
@@ -123,7 +124,7 @@ export default class Canvas {
             this.game.currRoom.pos.equals(new Vector2(7, 1)) ||
             this.game.currRoom.pos.equals(new Vector2(5, 1))
 
-        ) && (this.game.currPickUp == pickUps.get("warhead") || this.game.currRoom.fields.find((f) => f.entity instanceof Block && f.entity.type == 'warhead'))) {
+        ) && (this.game.currPickup.name == "warhead" || this.game.currRoom.fields.find((f) => f.entity instanceof Block && f.entity.type == 'warhead'))) {
             var imageData = this.context.getImageData(0, 0, this.context.canvas.width, 200);
             for (var i = 0; i < imageData.data.length; i += 4) {
                 if (imageData.data[i] == 0 &&
@@ -154,11 +155,11 @@ export default class Canvas {
         }
 
         this.drawHud()
-        this.drawConsumableCout(this.game.water, 0)
-        this.drawConsumableCout(this.game.food, 1)
-        this.drawStatsCout(Math.floor(this.game.time), 0)
-        this.drawStatsCout(this.game.score, 1)
-        if (this.game.currPickUp) this.drawPickUp(this.game.currPickUp)
+        this.drawConsumableCout(Stats.water, 0)
+        this.drawConsumableCout(Stats.food, 1)
+        this.drawStatsCout(Math.floor(Stats.time), 0)
+        this.drawStatsCout(Stats.points, 1)
+        if (this.game.currPickup) this.drawPickUp(this.game.currPickup.id)
         if (this.lettersToDraw.length > 0) this.drawSubtitles()
     }
 

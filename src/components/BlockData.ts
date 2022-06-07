@@ -56,13 +56,28 @@ export type BlockType =
     'pc' |
     'gate'
 
-export const pickUps = new Map([
-    ['water', 0],
-    ['bread', 1],
-    ['spanner', 2],
-    ['warhead', 3],
-    ['torch', 4],
-    ['key', 5],
-    ['pyramid', 6],
-])
+export class Pickup {
+    name: string
+    id: number
+    points: number
+    text: string
+    constructor(name: string, id: number, points: number, text: string) {
+        this.name = name
+        this.id = id
+        this.points = points
+        this.text = text
+    }
+}
+
+
+export const pickups = [
+    new Pickup("water", 0, 15, "This is a mug."),
+    new Pickup("bread", 1, 10, "This is a loaf of bread."),
+    new Pickup("spanner", 2, 75, "You have found a spanner."),
+    new Pickup("warhead", 3, 100, "You have formed a warhead, take it to a blue room, but hurry..."),
+    new Pickup("torch", 4, 75, "You have found a torch."),
+    new Pickup("key", 5, 75, "You have found a key."),
+    new Pickup("pyramid", 6, 75, "You have found a pyramid."),
+
+]
 

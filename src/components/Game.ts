@@ -4,10 +4,11 @@ import Player from './Player'
 import PlayerController from './PlayerController'
 import FieldData from './FieldData'
 import Vector2 from './Vector2'
-import { pickUps } from './BlockData'
+import { pickups, Pickup } from './BlockData'
 import Block from './Block'
 import MenuAudio from './../assets/sounds/menu.mp3'
 import RadiatorAudio from './../assets/sounds/radiatorInRoom.mp3'
+import Stats from './Stats'
 
 interface RoomData {
     x: number,
@@ -27,14 +28,11 @@ export default class Game {
     private startingAudio = new Audio()
     private radiatorInRoom = new Audio(RadiatorAudio)
     allRooms: Room[] = []
-    score = 0
-    time = 3000
-    water = 8499
-    food = 5499
+
     stoped = false
     gAnimation = 0
     warheadNumber = 0
-    currPickUp: number = null
+    currPickup: Pickup = null
     timeSinceLastConsumableChange = 0
     statsInterval: NodeJS.Timer
     deadInterval: NodeJS.Timer
@@ -155,29 +153,27 @@ export default class Game {
     private changeStats(deltaTime: number) {
         if (!this.isPlayerDead && !this.stoped && !this.gameWin && this.currRoom) {
 
-            this.time -= deltaTime
+            Stats.time -= deltaTime
             this.timeSinceLastConsumableChange += deltaTime
             if (this.timeSinceLastConsumableChange >= 0.3) {
                 this.timeSinceLastConsumableChange = 0
                 if (this.currRoom.fields.find(f => f.entity instanceof Block && f.entity.type == "radiator")) {
                     if (this.isEven) {
-                        this.water -= 20
+                        Stats.water -= 20
                         this.radiatorInRoom.play()
                     }
-                    else this.water -= 1
+                    else Stats.water -= 1
                 }
-                else this.water -= 1
-                if (this.currPickUp == pickUps.get("warhead")) this.isEven ? this.food -= 7 : this.food -= 4
-                else this.currPickUp ? this.food -= 4 : this.food -= 1
+                else Stats.water -= 1
+                if (this.currPickup && this.currPickup.name == "warhead") this.isEven ? Stats.food -= 7 : Stats.food -= 4
+                else this.currPickup ? Stats.food -= 4 : Stats.food -= 1
                 this.isEven = !this.isEven
-                if (this.water < 0 || this.food < 0) {
+                if (Stats.water < 0 || Stats.food < 0) {
                     this.gameOver = true
                 }
                 this.gAnimation += 1
                 if (this.gAnimation > 2)
                     this.gAnimation = 0
-            }
-            if (this.time == 0 || this.water == 0 || this.food == 0) {
             }
         }
 
@@ -255,12 +251,9 @@ export default class Game {
     newGame() {
         this.allRooms = []
         this.currRoom = null
-        this.score = 0
+        Stats.reset()
         this.warheadNumber = 0
-        this.time = 3000
-        this.water = 8499
-        this.food = 5499
-        this.currPickUp = null
+        this.currPickup = null
         this.timeSinceLastConsumableChange = 0
         this.createMenu(1)
 
