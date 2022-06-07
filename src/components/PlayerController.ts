@@ -5,16 +5,8 @@ import Room from "./Room"
 import Vector2 from "./Vector2"
 import { BlockTexturesMap, pickups } from './BlockData'
 import Field from "./Field"
-import WalkingAudio from './../assets/sounds/walking.mp3'
-import RotatingAudio from './../assets/sounds/rotating.mp3'
-import WalkWithItemAudio from './../assets/sounds/walkWithItem.mp3'
-import RotateWithItemAudio from './../assets/sounds/rotateWithItem.mp3'
-import useItemAudio from './../assets/sounds/useItem.mp3'
-import getItemAudio from './../assets/sounds/getItem.mp3'
-import getWarheadAudio from './../assets/sounds/getWarhead.mp3'
-import placingWarheadAudio from './../assets/sounds/placingWarhead.mp3'
-import dieAudio from './../assets/sounds/die.mp3'
 import Stats from './Stats'
+import Sounds from './Sounds'
 
 type Rotate = "left" | "right"
 
@@ -23,15 +15,7 @@ export default class PlayerController {
     private room: Room
     private game: Game
     private rotate: Rotate
-    private walking = new Audio(WalkingAudio)
-    private rotating = new Audio(RotatingAudio)
-    private walkWithItem = new Audio(WalkWithItemAudio)
-    private rotateWithItem = new Audio(RotateWithItemAudio)
-    private useItem = new Audio(useItemAudio)
-    private getItem = new Audio(getItemAudio)
-    private getWarhead = new Audio(getWarheadAudio)
-    private placingWarhead = new Audio(placingWarheadAudio)
-    private die = new Audio(dieAudio)
+
     private move = false
     moveInQueue = false;
     pickUps = [
@@ -62,16 +46,16 @@ export default class PlayerController {
             if (this.rotate == "left") {
                 this.player.rotateLeft()
                 if (this.game.currPickup)
-                    this.rotateWithItem.play()
+                    Sounds.rotateWithItem.play()
                 else
-                    this.rotating.play()
+                    Sounds.rotating.play()
             }
             else if (this.rotate == "right") {
                 this.player.rotateRight()
                 if (this.game.currPickup)
-                    this.rotateWithItem.play()
+                    Sounds.rotateWithItem.play()
                 else
-                    this.rotating.play()
+                    Sounds.rotating.play()
             }
             else if (this.move || this.moveInQueue) {
                 const playerField = this.game.currRoom.fields.find(f => f.entity instanceof Player)
@@ -86,9 +70,9 @@ export default class PlayerController {
                     this.game.currRoom.setMoving(nextField.pos, nextField)
                     nextField.pos = playerField.pos
                     if (this.game.currPickup)
-                        this.walkWithItem.play()
+                        Sounds.walkWithItem.play()
                     else
-                        this.walking.play()
+                        Sounds.walking.play()
                 }
                 this.moveInQueue = false
             }
@@ -135,17 +119,16 @@ export default class PlayerController {
                     this.useUsable("spanner", 25, "You have eliminated an electric fence.", nextField)
 
                 if (block.type == "toaster") {
-
                     if (this.game.currPickup.name == "bread") {
                         Stats.points += 25
                         this.game.canvas.getLettersToDraw("You have eliminated a toaster, but there is order in chaos, for in its place appears a life saving drink.")
                         nextField.setEntity(new Block('water'))
-                        this.useItem.play()
+                        Sounds.useItem.play()
 
                     }
                     else {
                         this.game.isPlayerDead = true
-                        this.die.play()
+                        Sounds.die.play()
                     }
                 }
                 if (block.type == "hourglass")
@@ -157,7 +140,7 @@ export default class PlayerController {
                         Stats.points += 20
                         this.game.canvas.getLettersToDraw("You have unlocked a door.")
                         nextField.entity = null
-                        this.useItem.play()
+                        Sounds.useItem.play()
 
                     }
                     else {
@@ -168,14 +151,14 @@ export default class PlayerController {
                     this.useUsable("key", 25, "You have eliminated a box that used to belong to pandora.", nextField)
                 if (block.type == "radiator") {
                     this.game.isPlayerDead = true
-                    this.die.play()
+                    Sounds.die.play()
                 }
                 if (block.type == "pc") {
                     if (this.game.currRoom.pos.equals(new Vector2(0, 0)))
                         this.game.canvas.getLettersToDraw("Find a static object besides food or water.")
                     else this.game.canvas.getLettersToDraw("You must find a padlock.")
                     Stats.points += 25
-                    this.useItem.play()
+                    Sounds.useItem.play()
                     nextField.entity = null
                 }
 
@@ -188,14 +171,14 @@ export default class PlayerController {
                         Stats.water += 1500
                         this.game.currPickup = null
                         Stats.points += 5
-                        this.useItem.play()
+                        Sounds.useItem.play()
                     }
                     else if (this.game.currPickup.name == "bread") {
                         this.game.canvas.getLettersToDraw("The bread raises your food reserves.")
                         Stats.food += 1500
                         this.game.currPickup = null
                         Stats.points += 5
-                        this.useItem.play()
+                        Sounds.useItem.play()
                     }
                     else if (this.game.currPickup.name == "warhead" &&
                         (this.game.currRoom.pos.equals(new Vector2(4, 5)) ||
@@ -207,10 +190,10 @@ export default class PlayerController {
                         playerField.pos.y == 1 &&
                         this.game.currRoom.fields.find((f) => f.entity instanceof Block && f.entity.type == 'bread')) {
                         this.game.canvas.getLettersToDraw("You have activated a warhead and the bread substantically increased.")
-                        this.placingWarhead.play()
+                        Sounds.placingWarhead.play()
                         this.game.stoped = true
 
-                        this.placingWarhead.onended = () => {
+                        Sounds.placingWarhead.onended = () => {
                             Stats.points += 175
                             Stats.food += 2500
                             this.game.currPickup = null
@@ -237,8 +220,8 @@ export default class PlayerController {
                                 this.awardPointsAndSubtitlesAfterPickUp()
                                 this.game.canvas.getLettersToDraw("Your food is running out faster.")
                                 if (this.game.currPickup.name == "warhead")
-                                    this.getWarhead.play()
-                                else this.getItem.play()
+                                    Sounds.getWarhead.play()
+                                else Sounds.getItem.play()
                             }
                         }
                     }
@@ -247,15 +230,15 @@ export default class PlayerController {
         }
     }
     useUsable(pickup: string, score: number, text: string, nextField: Field) {
-        if (this.game.currPickup.name == pickup) {
+        if (this.game.currPickup && this.game.currPickup.name == pickup) {
             Stats.points += score
             this.game.canvas.getLettersToDraw(text)
             nextField.entity = null
-            this.useItem.play()
+            Sounds.useItem.play()
         }
         else {
             this.game.isPlayerDead = true
-            this.die.play()
+            Sounds.die.play()
         }
     }
     awardPointsAndSubtitlesAfterPickUp() {
