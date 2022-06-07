@@ -1,46 +1,16 @@
 import Field from "./Field";
 import Player from "./Player";
 import Vector2 from './Vector2';
-import Hud from '../assets/hud.png'
-import statsFWImage from '../assets/numbers w&f.png'
-import statsSTImage from '../assets/numbers s&t.png'
-import pickUpImage from '../assets/pickUps.png'
-import startImage from '../assets/start.png'
-import lettersImage from '../assets/letters.png'
-import menuImage from '../assets/menu.png'
-import gameOverImage from '../assets/gameOver.png'
-import gameWinImage from '../assets/endScreen.png'
-import gameOverNumbersImage from '../assets/gameOverNumbers.png'
-import gameWinNumbersImage from '../assets/endNumbers.png'
-import menuWhenSoundImage from '../assets/whenSoundMenu.png'
-import chimeraSubtitleImage from '../assets/chimeraSubtitle.png'
-import gateAnimationImage from '../assets/gateAnimations.png'
-import keyboardImage from '../assets/keyboard.png'
 import Game from "./Game";
 import lettersToNumbers from "./lettersToNumbers";
-import { BlockTexturesMap, pickUps } from "./BlockData";
+import { pickUps } from "./BlockData";
 import Block from "./Block";
+import Assets from "./Assets"
 
 export default class Canvas {
     private canvas: HTMLCanvasElement = document.createElement('canvas')
     private context = this.canvas.getContext('2d')
     private textureSize = new Vector2(32, 32)
-    private hudImage = new Image()
-    private statsFW = new Image()
-    private statsST = new Image()
-    private pickUp = new Image()
-    private letter = new Image()
-    private start = new Image()
-    private gameOver = new Image()
-    private gameWin = new Image()
-    private gameOverNumbers = new Image()
-    private gameWinNumbers = new Image()
-    private gateAnimation = new Image()
-    private keyboard = new Image()
-
-    private menuWhenSound = new Image()
-    menu = new Image()
-    private chimeraSubtitle = new Image()
     private game: Game
     private moveLetter: NodeJS.Timer
     private letterPlace = 0
@@ -60,31 +30,16 @@ export default class Canvas {
         this.context.canvas.width = 320
         this.context.canvas.height = 240
         parentElement.append(this.canvas)
-        this.hudImage.src = Hud
-        this.statsFW.src = statsFWImage
-        this.statsST.src = statsSTImage
-        this.start.src = startImage
-        this.pickUp.src = pickUpImage
-        this.letter.src = lettersImage
-        this.menu.src = menuImage
-        this.gameOver.src = gameOverImage
-        this.gameWin.src = gameWinImage
-        this.gameOverNumbers.src = gameOverNumbersImage
-        this.gameWinNumbers.src = gameWinNumbersImage
-        this.menuWhenSound.src = menuWhenSoundImage
-        this.chimeraSubtitle.src = chimeraSubtitleImage
-        this.gateAnimation.src = gateAnimationImage
-        this.keyboard.src = keyboardImage
-        this.context.imageSmoothingEnabled = false;
-        this.start.onload = () => {
-            this.drawSite(this.start)
-        }
+        Assets.load(() => {
+            this.context.imageSmoothingEnabled = false;
+            this.drawSite(Assets.start)
+        })
     }
     changeSite(n: number) {
         if (n == 1)
-            this.drawSite(this.menuWhenSound)
+            this.drawSite(Assets.menuWhenSound)
         if (n == 2)
-            this.drawSite(this.menu)
+            this.drawSite(Assets.menu)
     }
 
     drawSite(image: HTMLImageElement) {
@@ -97,13 +52,13 @@ export default class Canvas {
     }
 
     end() {
-        this.drawSite(this.gameOver)
+        this.drawSite(Assets.gameOver)
         let numbToDraw = this.game.score.toString()
         while (numbToDraw.length < 4) {
             numbToDraw = "0" + numbToDraw
         }
         for (let d = 0; d < 4; d++) {
-            this.context.drawImage(this.gameOverNumbers,
+            this.context.drawImage(Assets.gameOverNumbers,
                 parseInt(numbToDraw[d]) * 8,
                 this.isEven ? 7 : 0,
                 8,
@@ -117,13 +72,13 @@ export default class Canvas {
     }
 
     win() {
-        this.drawSite(this.gameWin)
+        this.drawSite(Assets.gameWin)
         let numbToDraw = this.game.score.toString()
         while (numbToDraw.length < 4) {
             numbToDraw = "0" + numbToDraw
         }
         for (let d = 0; d < 4; d++) {
-            this.context.drawImage(this.gameWinNumbers,
+            this.context.drawImage(Assets.gameWinNumbers,
                 parseInt(numbToDraw[d]) * 16,
                 0,
                 16,
@@ -149,7 +104,7 @@ export default class Canvas {
                     if (f.layer == "top") {
                         height -= this.gridSize.x - 1
                     }
-                    this.context.drawImage(this.gateAnimation,
+                    this.context.drawImage(Assets.gateAnimation,
                         this.game.gAnimation * 32,
                         f.colorNumber * this.textureSize.x,
                         this.textureSize.y,
@@ -257,7 +212,7 @@ export default class Canvas {
         }
     }
     private drawHud() {
-        this.context.drawImage(this.hudImage,
+        this.context.drawImage(Assets.hud,
             0,
             0,
             320,
@@ -279,7 +234,7 @@ export default class Canvas {
         }
     }
     private drawDigitConsumable(digit: number, consumable: number, x: number) {
-        this.context.drawImage(this.statsFW,
+        this.context.drawImage(Assets.statsFoodWater,
             digit * 8,
             consumable * 7,
             8,
@@ -301,7 +256,7 @@ export default class Canvas {
         }
     }
     private drawDigitStats(digit: number, stats: number, x: number) {
-        this.context.drawImage(this.statsST,
+        this.context.drawImage(Assets.statsPointsTime,
             digit * 16,
             stats * 9,
             16,
@@ -313,7 +268,7 @@ export default class Canvas {
         );
     }
     private drawPickUp(n: number) {
-        this.context.drawImage(this.pickUp,
+        this.context.drawImage(Assets.pickUp,
             n * 32,
             0,
             32,
@@ -378,7 +333,7 @@ export default class Canvas {
             this.lettersToDraw.push("blank")
     }
     private drawLetter(letter: string, pxFromLeft: number) {
-        this.context.drawImage(this.letter,
+        this.context.drawImage(Assets.letter,
             lettersToNumbers.get(letter) * 8,
             0,
             8,
@@ -390,7 +345,7 @@ export default class Canvas {
         );
     }
     private drawChimeraSubtitle() {
-        this.context.drawImage(this.chimeraSubtitle,
+        this.context.drawImage(Assets.chimeraSubtitle,
             112 - this.chimeraPx,
             0,
             112,
